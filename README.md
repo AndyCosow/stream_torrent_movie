@@ -1,3 +1,3 @@
-1. Add .torrent to server directory.
+1. Add .torrent to server directory
 2. Run "node server.js"
-3. Visit "localhost:3000"
+3. Visit "http://localhost:3000"
