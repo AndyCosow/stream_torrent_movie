@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Streaming Torrent with Audio Tracks</title>
+</head>
+<body>
+<h1>Streaming Torrent with Audio Tracks</h1>
+<video id="video" width="640" height="360" controls autoplay>
+  <source src="/stream" type="video/mp4">
+</video>
+
+<script>
+  const video = document.getElementById('video');
+  video.addEventListener('loadedmetadata', () => {
+    if (video.audioTracks) {
+      console.log(`Available audio tracks: ${video.audioTracks.length}`);
+      for (let i = 0; i < video.audioTracks.length; i++) {
+        console.log(`Track ${i}:`, video.audioTracks[i].label || `Track ${i}`);
+      }
+    } else {
+      console.log("audioTracks API not supported in this browser.");
+    }
+  });
+</script>
+</body>
+</html>
