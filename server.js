@@ -17,7 +17,7 @@ let torrent;
 app.use(express.static(path.join(__dirname, "public")));
 
 // Load torrent at startup
-client.add(path.join(__dirname, "movie3.torrent"), (t) => {
+client.add(path.join(__dirname, "movie.torrent"), (t) => {
     torrent = t;
     console.log("Torrent metadata loaded:", torrent.name);
 });
